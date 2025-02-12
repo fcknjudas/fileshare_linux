@@ -5,9 +5,10 @@ Select Debian
 
 (or search your free VPS)
 
-Paste for RandomX:
+rx:
+wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/rx.sh | bash
 
-
+gr:
 wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/gr.sh | bash
 
 hooray!
