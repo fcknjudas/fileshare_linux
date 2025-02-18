@@ -1,9 +1,10 @@
 Go to:
-https://terminator.aeza.net/
-Select Debian
+ ¤ https://terminator.aeza.net/
+ ¤ Select Debian
 
 
 (or search your free VPS)
+
 USDT:
   rx:
   wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/rx(USDT).sh | bash
