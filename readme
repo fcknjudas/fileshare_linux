@@ -5,6 +5,9 @@ Go to:
 
 (or search your free VPS)
 
+APPLY MSR:
+  sudo wget -O - https://raw.githubusercontent.com/xmrig/xmrig/refs/heads/dev/scripts/randomx_boost.sh | bash
+
 USDT:
   rx:
   wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/rx-USDT.sh | bash
