@@ -11,16 +11,16 @@ TRY APPLY MSR:
 
 USDT:
   rx:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/rx-USDT.sh | bash
+  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/usdt/rx-USDT.sh | bash
 
   gr:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/gr-USDT.sh | bash
+  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/usdt/gr-USDT.sh | bash
 
 SOL:
   rx:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/rx-SOL.sh | bash
+  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/rx-SOL.sh | bash
 
   gr:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/gr-SOL.sh | bash
+  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/gr-SOL.sh | bash
 
 hooray!
