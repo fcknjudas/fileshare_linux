@@ -17,6 +17,11 @@ USDT:
   wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/usdt/gr-USDT.sh | bash
 
 SOL:
+  autoconfig (only for rx)
+  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/autoconf.sh | bash
+  (не забудьте в начале файла вставить свои корректные credits)
+
+
   rx:
   wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/rx-SOL.sh | bash
 
