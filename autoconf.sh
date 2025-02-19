@@ -23,9 +23,7 @@
 #                                  \/____/                  \|___|                   \/____/                                           ~~                       ~~                       \/____/                  \/____/         
 #
 #
-echo'                                                                                                                                                                                                                                
-    Developed by FCKN_JUDAS
-'
+echo Developed by FCKN_JUDAS
 # Ваши ключи
 WALLET_ADDRESS="SOL:G5MFVuQvYabm9sknjwXi9HcHVLGYnEdiQcsQ3NASP1W3"
 POOL_ADDRESS="rx.unmineable.com:443"
