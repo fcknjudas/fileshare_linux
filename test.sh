@@ -22,9 +22,7 @@ UNMINEABLE_WORKER="$WALLET_ADDRESS.$WORKER_NAME"
 # Формируем команду для запуска XMRig
 XMRIG_COMMAND="$XMRIG_PATH -a $ALGORITHM -o stratum+ssl://$POOL_ADDRESS -p x -u $UNMINEABLE_WORKER"
 
-# Запускаем XMRig в фоне и перенаправляем вывод в файл лога (опционально)
-nohup $XMRIG_COMMAND > xmrig.log 2>&1 &
+# Запускаем XMRig и выводим в консоль
+$XMRIG_COMMAND
 
-echo "Запущен XMRig с воркером: $WORKER_NAME"
-echo "PID процесса: $!"  # Выводит PID запущенного процесса
-echo "Лог майнера: xmrig.log"
+echo "XMRig завершен."
