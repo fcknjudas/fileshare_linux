@@ -54,7 +54,7 @@ XMRIG_DOWNLOAD_URL="https://github.com/xmrig/xmrig/releases/download/v${XMRIG_VE
 XMRIG_FOLDER="xmrig-ready"
 
 # Полный путь к xmrig
-XMRIG_PATH="./${XMRIG_FOLDER}/xmrig-6.22.2"
+XMRIG_PATH="./${XMRIG_FOLDER}/xmrig-6.20.0"
 
 
 # Функция для генерации случайного имени воркера
