@@ -1,11 +1,12 @@
 Go to:
- ¤ https://terminator.aeza.net/
- ¤ Select Debian
+
+  ¤ https://terminator.aeza.net/
+  ¤ Select Debian
 
 
 (or search your free VPS)
 
-APPLY MSR:
+TRY APPLY MSR:
   sudo wget -O - https://raw.githubusercontent.com/xmrig/xmrig/refs/heads/dev/scripts/randomx_boost.sh | bash
 
 USDT:
