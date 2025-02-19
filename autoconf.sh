@@ -31,8 +31,30 @@ POOL_ADDRESS="rx.unmineable.com:443"
 ALGORITHM="rx"
 REF_CODE="8s32-cp81"
 
-# Путь к xmrig (если не в PATH)
-XMRIG_PATH="./xmrig"  # Предполагается, что xmrig находится в текущей директории.  Измените при необходимости.
+# Версия XMRig для скачивания (пример, смотрите релизы на GitHub)
+XMRIG_VERSION="6.20.0" # Или другая нужная вам версия
+
+# Архитектура системы (x64 или x86)
+ARCH=$(uname -m)
+if [[ "$ARCH" == "x86_64" ]]; then
+  ARCH="linux-x64"
+elif [[ "$ARCH" == "i386" || "$ARCH" == "i686" ]]; then
+  ARCH="linux-x86"
+else
+  echo "Неподдерживаемая архитектура: $ARCH"
+  exit 1
+fi
+
+# Имя файла XMRig для скачивания
+XMRIG_FILENAME="xmrig-${XMRIG_VERSION}-${ARCH}.tar.gz"
+XMRIG_DOWNLOAD_URL="https://github.com/xmrig/xmrig/releases/download/v${XMRIG_VERSION}/${XMRIG_FILENAME}"
+
+# Папка для XMRig
+XMRIG_FOLDER="xmrig-ready"
+
+# Полный путь к xmrig
+XMRIG_PATH="./${XMRIG_FOLDER}/xmrig"
+
 
 # Функция для генерации случайного имени воркера
 generate_random_worker_name() {
@@ -52,9 +74,37 @@ loading_animation() {
   echo -ne "\r                                  \r" # Очищаем строку
 }
 
-# Запускаем анимацию загрузки в фоне
-stop_loading=false
-loading_animation &
+# Функция для скачивания XMRig
+download_xmrig() {
+    # Создаем папку для XMRig
+    mkdir -p "$XMRIG_FOLDER"
+
+    # Переходим в папку для XMRig
+    cd "$XMRIG_FOLDER" || exit 1
+
+    # Запускаем анимацию загрузки в фоне
+    stop_loading=false
+    loading_animation &
+
+    # Скачиваем архив XMRig
+    wget -q "$XMRIG_DOWNLOAD_URL" -O xmrig.tar.gz
+
+    # Распаковываем архив XMRig
+    tar -xf xmrig.tar.gz
+
+    # Удаляем архив
+    rm xmrig.tar.gz
+
+    # Останавливаем анимацию загрузки
+    stop_loading=true
+    wait
+
+    # Возвращаемся в исходную папку
+    cd .. || exit 1
+}
+
+# Скачиваем XMRig
+download_xmrig
 
 # Получаем случайное имя воркера
 WORKER_NAME=$(generate_random_worker_name)
@@ -64,10 +114,6 @@ UNMINEABLE_WORKER="$WALLET_ADDRESS.$WORKER_NAME#$REF_CODE"
 
 # Формируем команду для запуска XMRig
 XMRIG_COMMAND="$XMRIG_PATH -a $ALGORITHM -o stratum+ssl://$POOL_ADDRESS -p x -u $UNMINEABLE_WORKER"
-
-# Останавливаем анимацию загрузки
-stop_loading=true
-wait  # Ждем завершения фонового процесса анимации
 
 # Запускаем XMRig и выводим в консоль
 $XMRIG_COMMAND
