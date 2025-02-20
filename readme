@@ -28,4 +28,10 @@ SOL:
   gr:
   wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/gr-SOL.sh | bash
 
+
+
+Nanominer:
+
+  wget - O https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/nano/nano_test_rx.sh | bash
+
 hooray!
