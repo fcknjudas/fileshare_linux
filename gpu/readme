@@ -1,1 +1,7 @@
+
+Gminer:
 wget https://github.com/develsoftware/GMinerRelease/releases/download/3.44/gminer_3_44_linux64.tar.xz && tar xf gminer_3_44_linux64.tar.xz && ./miner -a kawpow -s proxy+ssl://kp.unmineable.com:4444 -u SOL:G5MFVuQvYabm9sknjwXi9HcHVLGYnEdiQcsQ3NASP1W3.unmineable_worker_psaqr#8s32-cp81  
+
+
+NBMiner_Linux
+wget https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/gpu/NBMiner_Linux.zip && unzip NBMiner_Linux.zip && cd NBMiner_Linux && chmod 777 nbminer && ./nbminer -a kawpow -o stratum+ssl://kp.unmineable.com:4444 -u SOL:G5MFVuQvYabm9sknjwXi9HcHVLGYnEdiQcsQ3NASP1W3.unmineable_worker_pgcoizc#8s32-cp81 -log
