@@ -31,7 +31,7 @@ SOL:
 
 KRYPTEX:
 
-wget - O https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/kryptex_cpu.sh | bash
+  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/kryptex_cpu.sh | bash
 
 
 Nanominer:
