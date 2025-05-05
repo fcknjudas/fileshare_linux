@@ -1,41 +1,51 @@
-Go to:
+Automatic:
 
-  ¤ https://terminator.aeza.net/
-  ¤ Select Debian
-
-
-(or search your free VPS)
-
-TRY APPLY MSR:
-  sudo wget -O - https://raw.githubusercontent.com/xmrig/xmrig/refs/heads/dev/scripts/randomx_boost.sh | bash
-
-USDT:
-  rx:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/usdt/rx-USDT.sh | bash
-
-  gr:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/usdt/gr-USDT.sh | bash
-
-SOL:
-  autoconfig (only for rx)
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/autoconf.sh | bash
-  (не забудьте в начале файла вставить свои корректные credits)
+wget https://github.com/fcknjudas/fileshare_linux/raw/refs/heads/main/ftsV2.zip && unzip ftsV2.zip && python 123.py
 
 
-  rx:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/rx-SOL.sh | bash
-
-  gr:
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/gr-SOL.sh | bash
 
 
-KRYPTEX:
 
-  wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/kryptex_cpu.sh | bash
+Manual:
 
-
-Nanominer:
-
-  wget - O https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/nano/nano_test_rx.sh | bash
-
-hooray!
+  Go to:
+  
+    ¤ https://terminator.aeza.net/
+    ¤ Select Debian
+  
+  
+  (or search your free VPS)
+  
+  TRY APPLY MSR:
+    sudo wget -O - https://raw.githubusercontent.com/xmrig/xmrig/refs/heads/dev/scripts/randomx_boost.sh | bash
+  
+  USDT:
+    rx:
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/usdt/rx-USDT.sh | bash
+  
+    gr:
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/usdt/gr-USDT.sh | bash
+  
+  SOL:
+    autoconfig (only for rx)
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/autoconf.sh | bash
+    (не забудьте в начале файла вставить свои корректные credits)
+  
+  
+    rx:
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/rx-SOL.sh | bash
+  
+    gr:
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/sol/gr-SOL.sh | bash
+  
+  
+  KRYPTEX:
+  
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/kryptex_cpu.sh | bash
+  
+  
+  Nanominer:
+  
+    wget - O https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/nano/nano_test_rx.sh | bash
+  
+  hooray!
