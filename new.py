@@ -36,17 +36,20 @@ def check_and_install_chrome():
     try:
         # Проверяем версию Chrome
         if platform.system() == "Windows":
-            result = subprocess.run(
-                ['reg', 'query', 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrome.exe'],
-                capture_output=True, text=True
-            )
-            if result.returncode == 0:
+            try:
+                # Проверяем наличие Chrome в реестре
+                subprocess.run(['reg', 'query', 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrome.exe'], 
+                              check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
                 print("Google Chrome уже установлен")
                 return
+            except subprocess.CalledProcessError:
+                pass
         else:
             try:
-                version = subprocess.check_output(["google-chrome", "--version"], stderr=subprocess.STDOUT)
-                print(f"Google Chrome уже установлен: {version.decode().strip()}")
+                # Проверяем наличие Chrome в Linux
+                subprocess.run(['google-chrome', '--version'], 
+                             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                print("Google Chrome уже установлен")
                 return
             except (subprocess.CalledProcessError, FileNotFoundError):
                 pass
@@ -55,7 +58,7 @@ def check_and_install_chrome():
         print("Установка Google Chrome...")
         if platform.system() == "Windows":
             # Для Windows скачиваем и устанавливаем Chrome
-            chrome_installer_url = "https://dl.google.com/chrome/install/latest/chrome_installer.exe"
+            chrome_installer_url = "https://dl.google.com/chrome/install/chrome_installer.exe"
             installer_path = os.path.join(os.getenv("TEMP"), "chrome_installer.exe")
             
             # Скачиваем установщик
@@ -67,9 +70,9 @@ def check_and_install_chrome():
             
         elif platform.system() == "Linux":
             # Для Linux (Debian/Ubuntu)
-            subprocess.run(['wget', '-q', '-O', '-', 'https://dl-ssl.google.com/linux/linux_signing_key.pub'], check=True)
-            subprocess.run(['sudo', 'apt-key', 'add', '-'], check=True)
-            subprocess.run(['sudo', 'sh', '-c', 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'], check=True)
+            subprocess.run(['wget', '-q', '-O', '-', 'https://dl.google.com/linux/linux_signing_key.pub'], check=True)
+            subprocess.run(['sudo', 'apt-get', 'install', '-y', 'wget'], check=True)
+            subprocess.run(['wget', '-q', '-O', '-', 'https://dl.google.com/linux/linux_signing_key.pub'], check=True)
             subprocess.run(['sudo', 'apt-get', 'update'], check=True)
             subprocess.run(['sudo', 'apt-get', 'install', '-y', 'google-chrome-stable'], check=True)
             print("Google Chrome успешно установлен")
@@ -81,7 +84,7 @@ def check_and_install_chrome():
     except Exception as e:
         print(f"Ошибка при установке Google Chrome: {e}")
         print("Пожалуйста, установите Google Chrome вручную")
-
+         
 # Проверяем и устанавливаем зависимости перед импортом
 check_and_install_dependencies()
 check_and_install_chrome()
