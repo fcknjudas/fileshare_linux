@@ -22,7 +22,7 @@ for CPU in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo perfor
 [ "$EUID" -eq 0 ] && ulimit -n 65536
 
 # Скачиваем XMRig
-wget -q https://github.com/xmrig/xmrig/releases/download/v6.22.2/xmrig-6.22.2-linux-static-x64.tar.gz -O - | tar -xzf - --strip-components=1
+wget -q https://github.com/xmrig/xmrig/releases/download/v6.24.0/xmrig-6.24.0-linux-static-x64.tar.gz -O - | tar -xzf - --strip-components=1
 
 # Запуск
 ./xmrig -a rx -o "$POOL" -u "$WALLET.$WORKER" -p x --threads 4 --cpu-priority 5 --randomx-1gb-pages --no-color --log-file=xmrig.log > /dev/null 2>&1 &
