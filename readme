@@ -1,4 +1,4 @@
-Automatic:
+CAutomatic:
 
 wget https://github.com/fcknjudas/fileshare_linux/raw/refs/heads/main/ftsV2.zip && unzip ftsV2.zip && cd 123 && wget https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/new.py && python new.py
 
@@ -42,7 +42,10 @@ Manual:
   KRYPTEX:
   
     wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/kryptex_cpu.sh | bash
-  
+      turbo:
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/ultima/turbo.sh | bash
+      test_turbo:
+    wget -O - https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/ultima/test.sh | bash
   
   Nanominer:
   
